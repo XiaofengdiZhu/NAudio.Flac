@@ -197,3 +197,4 @@ FakesAssemblies/
 
 # NuGet generation
 NuGet/
+/NAudio.Flac/nuget.config
