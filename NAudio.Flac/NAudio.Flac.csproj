@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.1;net45;net5.0-windows</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1;net472;net5.0-windows</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
   <PropertyGroup>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Authors>Unknown</Authors>
     <Description>Flac (Free Lossless Audio Coded) support for NAudio.</Description>
     <PackageLicenseExpression>Unlicense</PackageLicenseExpression>
@@ -18,6 +18,7 @@
     <PackageTags>music naudio flac</PackageTags>
     <PackageReleaseNotes>Just trying to keep this alive:, see: https://github.com/VPKSoft/NAudio.Flac</PackageReleaseNotes>
     <PackageId>NAudio.Flac.Unknown</PackageId>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp3.1|AnyCPU'">
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -29,7 +30,7 @@
     <FrameworkReference Include="Microsoft.WindowsDesktop.App.WindowsForms" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NAudio" Version="1.10.0" />
+    <PackageReference Include="NAudio" Version="2.0.0" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Flac_logo.png">
