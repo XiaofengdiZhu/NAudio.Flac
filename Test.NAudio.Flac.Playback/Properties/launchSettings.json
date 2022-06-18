@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Test.NAudio.Flac.Playback": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Files\\Muzic\\Ulkomaat\\Enya\\Enya - And Winter Came (2008)\\07 - Enya - Last Time By Moonlight.flac\""
+    }
+  }
+}

@@ -38,10 +38,10 @@ namespace NAudio.Flac
 
             return Math.Max(value, 0);
         }
-        
+
         public unsafe static Int32 ReadInt32(byte[] array, int offset, bool sync)
         {
-            return ReadInt32(array,offset,sync,4);
+            return ReadInt32(array, offset, sync, 4);
         }
 
         public static Int32 ReadInt32(Stream stream, bool sync, int length)
@@ -52,7 +52,7 @@ namespace NAudio.Flac
 
             return ReadInt32(buffer, 0, sync, length);
         }
-        
+
         public static Int32 ReadInt32(Stream stream, bool sync)
         {
             return ReadInt32(stream, sync, 4);
@@ -147,12 +147,12 @@ namespace NAudio.Flac
 
         public const string MimeURL = "-->";
 
-        public static System.Drawing.Image DecodeImage(byte[] rawdata, string mimetype)
+        public static byte[] DecodeImage(byte[] rawdata, string mimetype)
         {
-            Stream stream;
+            MemoryStream stream;
             if (mimetype.Trim() == MimeURL)
             {
-                WebClient client = new WebClient();
+                var client = new WebClient();
                 var data = client.DownloadData(GetURL(rawdata, mimetype));
                 stream = new MemoryStream(data);
             }
@@ -161,7 +161,7 @@ namespace NAudio.Flac
                 stream = new MemoryStream(rawdata, false);
             }
 
-            return Image.FromStream(stream);
+            return stream.ToArray();
         }
 
         public static string GetURL(byte[] RawData, string MimeType)

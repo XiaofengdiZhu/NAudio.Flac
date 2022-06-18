@@ -18,7 +18,7 @@ namespace NAudio.Flac
 
         public string LogoMimeType { get; private set; }
 
-        public System.Drawing.Image Image { get; private set; }
+        public byte[] Image { get; private set; }
 
         public CommercialFrame(FrameHeader header)
             : base(header)
