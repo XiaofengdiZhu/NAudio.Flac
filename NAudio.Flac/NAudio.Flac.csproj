@@ -1,42 +1,33 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.1;net472;net5.0-windows</TargetFrameworks>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <Version>1.0.2</Version>
-    <Authors>Unknown</Authors>
-    <Description>Flac (Free Lossless Audio Coded) support for NAudio.</Description>
-    <PackageLicenseExpression>Unlicense</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/VPKSoft/NAudio.Flac</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/VPKSoft/NAudio.Flac</RepositoryUrl>
-    <PackageIcon>Flac_logo.png</PackageIcon>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>music naudio flac</PackageTags>
-    <PackageReleaseNotes>Just trying to keep this alive:, see: https://github.com/VPKSoft/NAudio.Flac</PackageReleaseNotes>
-    <PackageId>NAudio.Flac.Unknown</PackageId>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp3.1|AnyCPU'">
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
-    <FrameworkReference Include="Microsoft.WindowsDesktop.App.WindowsForms" />
-  </ItemGroup>
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net5.0-windows' ">
-    <FrameworkReference Include="Microsoft.WindowsDesktop.App.WindowsForms" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="NAudio" Version="2.0.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\Flac_logo.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
+	<PropertyGroup>
+		<TargetFrameworks>netcoreapp3.1;net472;net6.0;net6.0-windows</TargetFrameworks>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+	</PropertyGroup>
+	<PropertyGroup>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<Version>1.0.2</Version>
+		<Authors>Unknown</Authors>
+		<Description>Flac (Free Lossless Audio Coded) support for NAudio.</Description>
+		<PackageLicenseExpression>Unlicense</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/VPKSoft/NAudio.Flac</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/VPKSoft/NAudio.Flac</RepositoryUrl>
+		<PackageIcon>Flac_logo.png</PackageIcon>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>music naudio flac</PackageTags>
+		<PackageReleaseNotes>Just trying to keep this alive:, see: https://github.com/VPKSoft/NAudio.Flac</PackageReleaseNotes>
+		<PackageId>NAudio.Flac.Unknown</PackageId>
+		<AssemblyVersion>1.0.3</AssemblyVersion>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="NAudio" Version="2.1.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="..\Flac_logo.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
 
 </Project>
