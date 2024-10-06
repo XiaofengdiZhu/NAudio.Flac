@@ -11,13 +11,13 @@
 		<Authors>Unknown</Authors>
 		<Description>Flac (Free Lossless Audio Coded) support for NAudio.</Description>
 		<PackageLicenseExpression>Unlicense</PackageLicenseExpression>
-		<PackageProjectUrl>https://github.com/VPKSoft/NAudio.Flac</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/VPKSoft/NAudio.Flac</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/XiaofengdiZhu/NAudio.Flac</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/XiaofengdiZhu/NAudio.Flac</RepositoryUrl>
 		<PackageIcon>Flac_logo.png</PackageIcon>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>music naudio flac</PackageTags>
 		<PackageReleaseNotes>Just trying to keep this alive:, see: https://github.com/VPKSoft/NAudio.Flac</PackageReleaseNotes>
-		<PackageId>NAudio.Flac.Unknown</PackageId>
+		<PackageId>NAudio.Flac.Unknown.Mod</PackageId>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="NAudio.Core" Version="2.2.1" />
