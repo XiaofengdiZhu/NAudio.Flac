@@ -326,7 +326,7 @@ namespace NAudio.Flac
             Dispose(false);
         }
 
-        public int Read(float[] buffer, int offset, int count)
+        public int Read(Span<float> buffer)
         {
             return -1;
         }

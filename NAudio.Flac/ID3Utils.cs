@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
-using System.Net;
+using System.Net.Http;
 using System.Text;
 
 namespace NAudio.Flac
@@ -147,14 +147,23 @@ namespace NAudio.Flac
 
         public const string MimeURL = "-->";
 
+        static readonly HttpClient SharedHttpClient = new HttpClient();
+
         public static byte[] DecodeImage(byte[] rawdata, string mimetype)
         {
             MemoryStream stream;
             if (mimetype.Trim() == MimeURL)
             {
-                var client = new WebClient();
-                var data = client.DownloadData(GetURL(rawdata, mimetype));
-                stream = new MemoryStream(data);
+                var request = new HttpRequestMessage(HttpMethod.Get, GetURL(rawdata, mimetype));
+                using (var response = SharedHttpClient.Send(request))
+                {
+                    response.EnsureSuccessStatusCode();
+                    stream = new MemoryStream();
+                    using (var responseStream = response.Content.ReadAsStream())
+                    {
+                        responseStream.CopyTo(stream);
+                    }
+                }
             }
             else
             {
